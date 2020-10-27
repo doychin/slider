@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="styles/slider.css"/>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td><label for="red" style="color: red">Red</label></td>
+                    <td colspan="2"><input name="red" id="red" onchange="update('red')" disabled type="range" min="0"
+                               max="255"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>0</td>
+                    <td style="text-align: right">255</td>
+                </tr>
+                <tr>
+                    <td><label for="green" style="color: green">Green</label></td>
+                    <td colspan="2"><input name="green" id="green" onchange="update('green')" disabled type="range" min="0"
+                               max="255">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>0</td>
+                    <td style="text-align: right">255</td>
+                </tr>
+
+                <tr>
+                    <td><label for="blue" style="color: blue">Blue</label>
+                    </td>
+                    <td colspan="2"><input name="blue" id="blue" onchange="update('blue')" disabled type="range" min="0"
+                               max="255"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>0</td>
+                    <td style="text-align: right">255</td>
+                </tr>
+            </table>
+        </td>
+        <td style="padding-left: 50px">
+            <div id="panel" style="width:150px;height:120px;border:1px solid #000;border-radius: 15px;"></div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
