@@ -16,7 +16,6 @@ input[type=range]::-webkit-slider-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: white;
     border-color: black;
     border-width: 1px;
     cursor: pointer;
@@ -26,8 +25,27 @@ input[type=range]::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: white;
     border-color: black;
     border-width: 1px;
     cursor: pointer;
+}
+
+.red::-moz-range-thumb {
+    background: red;
+}
+.green::-moz-range-thumb {
+    background: green;
+}
+.blue::-moz-range-thumb {
+    background: blue;
+}
+
+.red::-webkit-slider-thumb {
+    background: red;
+}
+.green::-webkit-slider-thumb {
+    background: green;
+}
+.blue::-webkit-slider-thumb {
+    background: blue;
 }
