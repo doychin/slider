@@ -85,7 +85,7 @@ class SliderApplicationTests {
                 return true;
             }).take(1))
             .then()).block(Duration.ofSeconds(10));
-        
+
         assertEquals(0, repository.count());
     }
 }

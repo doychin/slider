@@ -46,7 +46,7 @@ public class SliderWebSocketHandler implements WebSocketHandler {
             repository.save(entity);
 
             return value.toRGB();
-        } catch (JsonProcessingException e) {
+        } catch (Exception e) {
             return "error";
         }
     }
