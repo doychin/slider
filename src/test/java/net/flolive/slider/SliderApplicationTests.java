@@ -43,7 +43,7 @@ class SliderApplicationTests {
 
     @Test
     void testCorrectValues() {
-        Map<String, String> testMessages = new HashMap<>() {
+        Map<String, String> testMessages = new HashMap<String, String>() {
 
             {
                 put("#000000", "{\"red\":0,\"green\":0,\"blue\":0}");
