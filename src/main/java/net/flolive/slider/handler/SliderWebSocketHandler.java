@@ -1,6 +1,5 @@
 package net.flolive.slider.handler;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.flolive.slider.entity.SliderEntity;
 import net.flolive.slider.respository.SliderRepository;
@@ -47,7 +46,7 @@ public class SliderWebSocketHandler implements WebSocketHandler {
 
             return value.toRGB();
         } catch (Exception e) {
-            return "error";
+            return "server error";
         }
     }
 

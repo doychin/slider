@@ -81,7 +81,7 @@ class SliderApplicationTests {
         webSocketClient.execute(URI.create(String.format("ws://localhost:%d/value", port)), session -> session
             .send(Mono.just("{random:0}").map(session::textMessage))
             .and(session.receive().map(WebSocketMessage::getPayloadAsText).map(response -> {
-                assertEquals("error", response);
+                assertEquals("server error", response);
                 return true;
             }).take(1))
             .then()).block(Duration.ofSeconds(10));

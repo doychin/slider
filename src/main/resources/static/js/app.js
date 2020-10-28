@@ -26,11 +26,11 @@ function connect() {
         let panel = document.getElementById("panel");
 
         let data = event.data.toString();
-        if (data !== "error") {
+        if (data.startsWith("#")) {
             panel.style.backgroundColor = data;
             panel.innerHTML = "";
         } else {
-            panel.innerHTML = "server error";
+            panel.innerHTML = data;
         }
     }
 
