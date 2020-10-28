@@ -3,7 +3,17 @@ let ws = null;
 const state = {red: 0, green: 0, blue: 0};
 
 function connect() {
-    ws = new WebSocket("ws://localhost:8080/value");
+    function calculateWsUrl() {
+        let protocol = window.location.protocol === "https:" ? "wss" : "ws";
+        let path = window.location.pathname;
+        if (!path.endsWith("/")) {
+            path = path.substring(0, path.lastIndexOf("/") + 1);
+        }
+        return protocol + "://" + window.location.host + path + "value";
+    }
+
+    let url = calculateWsUrl();
+    ws = new WebSocket(url);
 
     ws.onopen = function () {
         ["red", "green", "blue"].forEach(function (value) {
